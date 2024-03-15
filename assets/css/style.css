@@ -5,8 +5,22 @@
     font-family: 'Lato', sans-serif;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-weight: 400;
+    margin: 10px 0;
+}
+
+p {
+    font-size: 15px;
+}
+
 :root {
     --header-line-height: 46.5px;
+}
+
+.text-white {
+    color: #fff;
 }
 
 /* Header */
@@ -103,11 +117,60 @@
 
 #sliders .slider-info p {
     margin: 15px 0;
-    font-size: 15px;
 }
 
 #sliders .slider-info h3 {
-    margin: 10px 0;
     font-size: 24px;
-    font-weight: 400;
+}
+
+/* Container - Content */
+.content-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 64px 16px;
+}
+
+.content-section .section-heading {
+    font-size: 30px;
+    letter-spacing: 4px;
+    text-align: center;
+}
+
+.content-section .section-subheading {
+    opacity: 0.6;
+    margin: 15px 0;
+    font-style: italic;
+    text-align: center;
+}
+
+.content-section .member-about {
+    margin: 15px 0;
+    text-align: justify;
+    line-height: 1.5;
+}
+
+.list-member::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.list-member {
+    padding: 32px 0;
+}
+
+.member-info {
+    width: calc(100% / 3);
+    float: left;
+    text-align: center;
+}
+
+.member-info .member-name {
+    margin: 15px 0;
+}
+
+.member-info .member-avatar {
+    width: 60%;
+    border-radius: 4px;
+    margin-bottom: 16px;
 }
