@@ -20,7 +20,13 @@ p {
 }
 
 .text-white {
-    color: #fff;
+    color: #fff !important;
+}
+
+.list-place::after, .list-tour::after, .list-member::after {
+    content: "";
+    display: block;
+    clear: both;
 }
 
 /* Header */
@@ -149,12 +155,6 @@ p {
     line-height: 1.5;
 }
 
-.list-member::after {
-    content: "";
-    display: block;
-    clear: both;
-}
-
 .list-member {
     padding: 32px 0;
 }
@@ -173,4 +173,84 @@ p {
     width: 60%;
     border-radius: 4px;
     margin-bottom: 16px;
+}
+
+/* Container - Tours */
+#tours {
+    background-color: #000;
+}
+
+#tours .list-tour {
+    background-color: #fff;
+    list-style-type: none;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+#tours .list-tour li {
+    color: #757575;
+    padding: 8px 16px;
+    border-bottom: 1px solid #ddd;
+}
+
+#tours .sold-out {
+    background-color: #f44336;
+    color: #fff;
+    margin-left: 16px;
+    padding: 0 8px;
+}
+
+#tours .quantity {
+    padding: 0 8px;
+    margin-right: 16px;
+    float: right;
+    background-color: #000;
+    color: #fff;
+    border-radius: 50%;
+}
+
+#tours .list-place {
+    padding: 32px 0;
+}
+
+.list-place {
+    margin: 0 -8px;
+}
+.place-item {
+    width: calc(100% / 3);
+    float: left;
+    padding: 0 8px;
+}
+
+.place-item .place-info {
+    background-color: #fff;
+    padding: 0 16px;
+}
+
+.place-item .place-img {
+    width: 100%;
+    display: block;
+}
+
+.place-item .place-name {
+    padding: 15px 0;
+}
+
+.place-item .place-date {
+    margin-bottom: 15px;
+    opacity: 0.6;
+}
+
+.place-item .place-about {
+    margin: 15px 0;
+}
+
+.place-item .buy-ticket {
+    margin-bottom: 16px;
+    padding: 8px 16px;
+    background-color: #000;
+    color: #fff;
+    border: 0;
+    height: 38.5px;
+    font-size: 15px;
 }
