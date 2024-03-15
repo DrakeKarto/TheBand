@@ -17,16 +17,14 @@
     top: 0;
     left: 0;
     right: 0;
+    z-index: 1;
     position: fixed;
 }
+
 #header>.nav>li,
 #header .nav li a {
     color: #fff;
     cursor: pointer;
-}
-
-#header>.nav>li,
-#header>.nav>li>a {
     text-decoration: none;
     line-height: var(--header-line-height);
     padding: 0 12px;
@@ -66,7 +64,6 @@
     text-decoration: none;
 }
 
-
 #header li:hover .subnav {
     display: block;
 }
@@ -83,4 +80,34 @@
 
 #header .btn-search:hover {
     background-color: #f44336;
+}
+
+/* Container */
+/* Container - Slider */
+#sliders {
+    position: relative;
+    margin-top: var(--header-line-height);
+    padding-top: 50%;
+    background: url(../img/sliders/chicago.jpg) top center / cover no-repeat;
+    color: #fff;
+}
+
+#sliders .slider-info {
+    position: absolute;
+    right: 0;
+    left: 0;
+    text-align: center;
+    bottom: 0;
+    padding: 32px 16px;
+}
+
+#sliders .slider-info p {
+    margin: 15px 0;
+    font-size: 15px;
+}
+
+#sliders .slider-info h3 {
+    margin: 10px 0;
+    font-size: 24px;
+    font-weight: 400;
 }
