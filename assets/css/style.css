@@ -351,3 +351,114 @@ p {
 #footer>a:hover>i {
     opacity: 0.3;
 }
+
+/* Modal */
+.modal {
+    background-color: rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.open {
+    display: flex;
+}
+
+.modal .modal-container {
+    background-color: #fff;
+    width: 900px;
+    animation: buyTicketFadeIn ease 0.2s;
+}
+
+.modal .modal-header {
+    background-color: #009688;
+    width: 100%;
+    height: 129px;
+    position: relative;
+}
+.modal .modal-header i {
+    margin-right: 16px;
+}
+.modal .modal-header p {
+    /* padding: 32px 16px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: #fff;
+    font-size: 30px;
+    letter-spacing: 4px;
+}
+
+.modal .btn-modal-close {
+    background-color: #009688;
+    color: #fff;
+    border: 0;
+    padding: 13px;
+    top: 0;
+    right: 0;
+    position: absolute;
+}
+
+.modal .btn-modal-close:hover {
+    opacity: 0.6;
+}
+
+.modal .btn-modal-close i {
+    margin: 0;
+}
+
+.modal .modal-footer,
+.modal .modal-body {
+    padding: 0 16px;
+}
+
+.modal-section .modal-label {
+    margin: 15px 0;
+}
+
+.modal-section .modal-input {
+    border: 1px solid #ccc;
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+}
+
+.modal .btn-pay {
+    padding: 16px;
+    margin: 16px 0;
+    background-color: #009688;
+    color: #fff;
+    border: 0;
+    width: 100%;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.modal .btn-pay:hover {
+    color: #000;
+    background-color: #ccc;
+}
+
+.modal .modal-footer {
+    float: right;
+    margin-bottom: 15px;
+}
+
+.modal .modal-footer a {
+    color: #2196F3;
+}
+
+@keyframes buyTicketFadeIn {
+    from {
+        transform: translateY(-200px);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
