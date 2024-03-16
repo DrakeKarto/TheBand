@@ -233,6 +233,10 @@ p {
     display: block;
 }
 
+.place-item .place-img:hover {
+    opacity: 0.6;
+}
+
 .place-item .place-name {
     padding: 15px 0;
 }
@@ -308,6 +312,12 @@ p {
     cursor: pointer;
 }
 
+.place-item .buy-ticket:hover,
+.contact-info .btn-send:hover {
+    background-color: #ccc;
+    color: #000;
+}
+
 /* Container - Mapping */
 .map {
     background-repeat: no-repeat;
@@ -325,7 +335,7 @@ p {
 
 #footer>a>i {
     font-size: 25px;
-    margin: 0 3px;
+    margin: 0 2px;
     text-decoration: none;
     color: #000;
     opacity: 0.6;
@@ -336,4 +346,8 @@ p {
     margin-top: 15px;
     color: #000;
     opacity: 0.6;
+}
+
+#footer>a:hover>i {
+    opacity: 0.3;
 }
