@@ -184,6 +184,7 @@
 
         const navMore = document.querySelector('.nav-more')
         const subNav = document.querySelector('.subnav')
+        const isMobile = window.matchMedia("(max-width: 740px)").matches;
         
         function showBuyTicket() {
             modal.classList.add('open')
@@ -200,9 +201,16 @@
 
             btnMenuClose.style.display = 'block';
         }
+        if(isMobile) {
+            navMore.onclick = function() {
+                if(subNav.style.display == 'none') {
+                    subNav.style.display = 'block';
+                }
+                else {
+                    subNav.style.display = 'none';
+                }
+            }
 
-        navMore.onclick = function() {
-            subNav.style.display = 'block';
         }
 
         btnMenuClose.onclick = function() {
