@@ -30,6 +30,26 @@
     #header>.nav>li, #header .nav li a {
         width: 100%;
     }
+    .member-info .member-avatar {
+        width: 100%;
+    }
+    .member-info {
+        width: 100%;
+        float: none;
+    }
+    .place-item {
+        width: 100%;
+        float: none;
+        padding: 8px;
+    }
+    .contact-info .contact-input input {
+        width: 100%;
+    }
+    .modal .modal-container {
+        width: 100%;
+        margin: 0 10px;
+        z-index: 1;
+    }
 }
 
 @media (min-width: 740px) and (max-width: 1024px) {
