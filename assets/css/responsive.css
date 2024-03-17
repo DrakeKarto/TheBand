@@ -30,9 +30,6 @@
     #header>.nav>li, #header .nav li a {
         width: 100%;
     }
-    #header li:active .subnav {
-        display: block;
-    }
 }
 
 @media (min-width: 740px) and (max-width: 1024px) {
