@@ -76,6 +76,7 @@ p {
     background-color: #fff;
     width: 160px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    animation: FadeIn linear 0.25s;
 }
 
 .nav .subnav a {
@@ -89,19 +90,41 @@ p {
     display: block;
 }
 
+#header .btn-menu,
 #header .btn-search {
-    float: right;
     color: #fff;
     background-color: rgba(0, 0, 0, 0);
     border: 0;
     width: 62px;
     height: var(--header-line-height);
     cursor: pointer;
+    top: 0;
+    right: 0;
+    position: absolute;
+}
+
+#header .btn-menu {
+    display: none;
+}
+
+#header .btn-menu:hover {
+    background-color: #ccc;
 }
 
 #header .btn-search:hover {
     background-color: #f44336;
 }
+
+.btn-close-nav>i {
+    padding-left: 50%;
+    display: none;
+    line-height: var(--header-line-height);
+}
+
+#header>.nav>.btn-close-nav {
+    padding: 0;
+}
+
 
 /* Container */
 /* Container - Slider */
@@ -460,5 +483,13 @@ p {
     }
     to {
         transform: translateY(0);
+    }
+}
+@keyframes FadeIn {
+    from {
+        opacity: 0.0;
+    }
+    to {
+        opacity: 1.0;
     }
 }

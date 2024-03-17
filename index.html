@@ -12,7 +12,7 @@
 <body>
     <div class="main">
         <div id="header">
-            <ul class="nav">
+            <ul id="mobile-menu" class="nav">
                 <li><a href="#">HOME</a></li>
                 <li><a href="#members">BAND</a></li>
                 <li><a href="#tours">TOUR</a></li>
@@ -25,10 +25,16 @@
                         <li><a href="#">Media</a></li>
                     </ul>
                 </li>
-                <button class="btn-search">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                </button>
+                <li id="mobile-close-btn" class="btn-close-nav">
+                    <i class="fa-solid fa-xmark"></i>
+                </li>
             </ul>
+            <button id="mobile-menu-btn" class="btn-menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <button class="btn-search">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
         </div>
         <div id="container">
             <div id="sliders">
@@ -144,7 +150,7 @@
         <div class="modal-container">
             <div class="modal-header">
                 <p><i class="fa-solid fa-suitcase"></i>Tickets</p>
-                <button class="btn-modal-close js-btn-modal-close"><i class="fa-solid fa-x"></i></button>
+                <button class="btn-modal-close js-btn-modal-close"><i class="fa-solid fa-xmark"></i></button>
             </div>
             <div class="modal-body">
                 <div class="modal-section">
@@ -171,12 +177,40 @@
         const modal = document.querySelector('.js-modal')
         const btnClose = document.querySelector('.js-btn-modal-close')
 
+        const btnMenu = document.getElementById('mobile-menu-btn')
+        const header = document.getElementById('header')
+        const nav = document.getElementById('mobile-menu')
+        const btnMenuClose = document.querySelector('.btn-close-nav>i')
+
+        const navMore = document.querySelector('.nav-more')
+        const subNav = document.querySelector('.subnav')
+        
         function showBuyTicket() {
             modal.classList.add('open')
         }
+        
         function hideBuyTicket() {
             modal.classList.remove('open')
         }
+
+        btnMenu.onclick = function() {
+            header.style.height = 'auto';
+            nav.style.display = 'block';
+            btnMenu.style.display = 'none';
+
+            btnMenuClose.style.display = 'block';
+        }
+
+        
+
+        btnMenuClose.onclick = function() {
+            header.style.height = 'var(--header-line-height)';
+            nav.style.display = 'none';
+            btnMenu.style.display = 'block';
+
+            btnMenuClose.style.display = 'none';
+        }
+
         for(const item of btnBuys) {
             item.addEventListener('click', showBuyTicket)
         }
